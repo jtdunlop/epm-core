@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AA569974-9357-4096-BFD9-4654FD6818A0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DBSoft.EPM.DAL.CodeFirst</RootNamespace>
+    <AssemblyName>DBSoft.EPM.DAL.CodeFirst</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <CodeContractsAssemblyMode>0</CodeContractsAssemblyMode>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+    <DontImportPostSharp>True</DontImportPostSharp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeContractsEnableRuntimeChecking>False</CodeContractsEnableRuntimeChecking>
+    <CodeContractsRuntimeOnlyPublicSurface>False</CodeContractsRuntimeOnlyPublicSurface>
+    <CodeContractsRuntimeThrowOnFailure>True</CodeContractsRuntimeThrowOnFailure>
+    <CodeContractsRuntimeCallSiteRequires>False</CodeContractsRuntimeCallSiteRequires>
+    <CodeContractsRuntimeSkipQuantifiers>False</CodeContractsRuntimeSkipQuantifiers>
+    <CodeContractsRunCodeAnalysis>False</CodeContractsRunCodeAnalysis>
+    <CodeContractsNonNullObligations>True</CodeContractsNonNullObligations>
+    <CodeContractsBoundsObligations>True</CodeContractsBoundsObligations>
+    <CodeContractsArithmeticObligations>False</CodeContractsArithmeticObligations>
+    <CodeContractsEnumObligations>False</CodeContractsEnumObligations>
+    <CodeContractsRedundantAssumptions>False</CodeContractsRedundantAssumptions>
+    <CodeContractsMissingPublicRequiresAsWarnings>True</CodeContractsMissingPublicRequiresAsWarnings>
+    <CodeContractsInferRequires>True</CodeContractsInferRequires>
+    <CodeContractsInferEnsures>False</CodeContractsInferEnsures>
+    <CodeContractsInferObjectInvariants>False</CodeContractsInferObjectInvariants>
+    <CodeContractsSuggestAssumptions>False</CodeContractsSuggestAssumptions>
+    <CodeContractsSuggestRequires>True</CodeContractsSuggestRequires>
+    <CodeContractsSuggestObjectInvariants>False</CodeContractsSuggestObjectInvariants>
+    <CodeContractsRunInBackground>True</CodeContractsRunInBackground>
+    <CodeContractsShowSquigglies>True</CodeContractsShowSquigglies>
+    <CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
+    <CodeContractsEmitXMLDocs>False</CodeContractsEmitXMLDocs>
+    <CodeContractsCustomRewriterAssembly />
+    <CodeContractsCustomRewriterClass />
+    <CodeContractsLibPaths />
+    <CodeContractsExtraRewriteOptions />
+    <CodeContractsExtraAnalysisOptions />
+    <CodeContractsSQLServerOption />
+    <CodeContractsBaseLineFile />
+    <CodeContractsCacheAnalysisResults>True</CodeContractsCacheAnalysisResults>
+    <CodeContractsFailBuildOnWarnings>False</CodeContractsFailBuildOnWarnings>
+    <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
+    <CodeContractsReferenceAssembly>Build</CodeContractsReferenceAssembly>
+    <CodeContractsAnalysisWarningLevel>0</CodeContractsAnalysisWarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dbsoft.Cache.Aspect, Version=2.1.0.9, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DbSoft.Cache.Aspect.2.1.0.9\lib\net451\Dbsoft.Cache.Aspect.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Dbsoft.Cache.Aspect.Core, Version=2.1.0.9, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DbSoft.Cache.Aspect.Core.2.1.0.9\lib\net451\Dbsoft.Cache.Aspect.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PostSharp, Version=4.1.10.0, Culture=neutral, PublicKeyToken=b13fd38b8f9c99d7, processorArchitecture=MSIL">
+      <HintPath>..\packages\PostSharp.4.1.10\lib\net35-client\PostSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Migrations\201505310225540_MosaicBlueprints.cs" />
+    <Compile Include="Migrations\201505310225540_MosaicBlueprints.Designer.cs">
+      <DependentUpon>201505310225540_MosaicBlueprints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201506070832018_Carnyx.cs" />
+    <Compile Include="Migrations\201506070832018_Carnyx.Designer.cs">
+      <DependentUpon>201506070832018_Carnyx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201506132304150_MissingIndexes.cs" />
+    <Compile Include="Migrations\201506132304150_MissingIndexes.Designer.cs">
+      <DependentUpon>201506132304150_MissingIndexes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201506202243039_SolarSystem.cs" />
+    <Compile Include="Migrations\201506202243039_SolarSystem.Designer.cs">
+      <DependentUpon>201506202243039_SolarSystem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201506240822173_ManufacturingCostPrecision.cs" />
+    <Compile Include="Migrations\201506240822173_ManufacturingCostPrecision.Designer.cs">
+      <DependentUpon>201506240822173_ManufacturingCostPrecision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201506262249157_MoreIndexes.cs" />
+    <Compile Include="Migrations\201506262249157_MoreIndexes.Designer.cs">
+      <DependentUpon>201506262249157_MoreIndexes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201507172230235_FreightCosts.cs" />
+    <Compile Include="Migrations\201507172230235_FreightCosts.Designer.cs">
+      <DependentUpon>201507172230235_FreightCosts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508010139563_TransactionTypeIndex.cs" />
+    <Compile Include="Migrations\201508010139563_TransactionTypeIndex.Designer.cs">
+      <DependentUpon>201508010139563_TransactionTypeIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508252300535_Galatea.cs" />
+    <Compile Include="Migrations\201508252300535_Galatea.Designer.cs">
+      <DependentUpon>201508252300535_Galatea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510012315030_Vanguard.cs" />
+    <Compile Include="Migrations\201510012315030_Vanguard.Designer.cs">
+      <DependentUpon>201510012315030_Vanguard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510051923107_TrimItems.cs" />
+    <Compile Include="Migrations\201510051923107_TrimItems.Designer.cs">
+      <DependentUpon>201510051923107_TrimItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609190634417_YC118.8.cs" />
+    <Compile Include="Migrations\201609190634417_YC118.8.Designer.cs">
+      <DependentUpon>201609190634417_YC118.8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609260411046_StationPk.cs" />
+    <Compile Include="Migrations\201609260411046_StationPk.Designer.cs">
+      <DependentUpon>201609260411046_StationPk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\StaticDataMigration.cs" />
+    <Compile Include="Models\EveAccount.cs" />
+    <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\AccountBalance.cs" />
+    <Compile Include="Models\ApplicationLog.cs" />
+    <Compile Include="Models\Asset.cs" />
+    <Compile Include="Models\Blueprint.cs" />
+    <Compile Include="Models\BlueprintInstance.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Character.cs" />
+    <Compile Include="Models\Configuration.cs" />
+    <Compile Include="Models\Corporation.cs" />
+    <Compile Include="Models\EPMContext.cs" />
+    <Compile Include="Models\EveApiStatus.cs" />
+    <Compile Include="Models\Gate.cs" />
+    <Compile Include="Models\Group.cs" />
+    <Compile Include="Models\HiredTeam.cs" />
+    <Compile Include="Models\HiredTeamAuction.cs" />
+    <Compile Include="Models\HiredTeamCost.cs" />
+    <Compile Include="Models\HiredTeamSpecialty.cs" />
+    <Compile Include="Models\IpAddressBlacklist.cs" />
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\ItemExtension.cs" />
+    <Compile Include="Models\Manifest.cs" />
+    <Compile Include="Models\Mapping\AccountBalanceMap.cs" />
+    <Compile Include="Models\Mapping\CodeFirstExtensions.cs" />
+    <Compile Include="Models\Mapping\EveAccountMap.cs" />
+    <Compile Include="Models\Mapping\AccountMap.cs" />
+    <Compile Include="Models\Mapping\ApplicationLogMap.cs" />
+    <Compile Include="Models\Mapping\AssetMap.cs" />
+    <Compile Include="Models\Mapping\BlueprintInstanceMap.cs" />
+    <Compile Include="Models\Mapping\BlueprintMap.cs" />
+    <Compile Include="Models\Mapping\CategoryMap.cs" />
+    <Compile Include="Models\Mapping\CharacterMap.cs" />
+    <Compile Include="Models\Mapping\ConfigurationMap.cs" />
+    <Compile Include="Models\Mapping\CorporationMap.cs" />
+    <Compile Include="Models\Mapping\EveApiStatuMap.cs" />
+    <Compile Include="Models\Mapping\GateMap.cs" />
+    <Compile Include="Models\Mapping\GroupMap.cs" />
+    <Compile Include="Models\Mapping\HiredTeamMap.cs" />
+    <Compile Include="Models\Mapping\HiredTeamSpecialtyMap.cs" />
+    <Compile Include="Models\Mapping\IpAddressBlacklistMap.cs" />
+    <Compile Include="Models\Mapping\ItemExtensionMap.cs" />
+    <Compile Include="Models\Mapping\ItemMap.cs" />
+    <Compile Include="Models\Mapping\ManifestMap.cs" />
+    <Compile Include="Models\Mapping\MarketPriceMap.cs" />
+    <Compile Include="Models\Mapping\MarketImportMap.cs" />
+    <Compile Include="Models\Mapping\MarketResearchMap.cs" />
+    <Compile Include="Models\Mapping\MarketOrderMap.cs" />
+    <Compile Include="Models\Mapping\ProductionJobMap.cs" />
+    <Compile Include="Models\Mapping\RegionMap.cs" />
+    <Compile Include="Models\Mapping\SchemaVersionMap.cs" />
+    <Compile Include="Models\Mapping\SolarSystemMap.cs" />
+    <Compile Include="Models\Mapping\StationMap.cs" />
+    <Compile Include="Models\Mapping\sysdiagramMap.cs" />
+    <Compile Include="Models\Mapping\TransactionMap.cs" />
+    <Compile Include="Models\Mapping\UserMap.cs" />
+    <Compile Include="Models\Mapping\UserWhitelistMap.cs" />
+    <Compile Include="Models\MarketImport.cs" />
+    <Compile Include="Models\MarketOrder.cs" />
+    <Compile Include="Models\MarketPrice.cs" />
+    <Compile Include="Models\MarketResearch.cs" />
+    <Compile Include="Models\ProductionJob.cs" />
+    <Compile Include="Models\Region.cs" />
+    <Compile Include="Models\SchemaVersion.cs" />
+    <Compile Include="Models\SolarSystem.cs" />
+    <Compile Include="Models\Station.cs" />
+    <Compile Include="Models\sysdiagram.cs" />
+    <Compile Include="Models\Transaction.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserWhitelist.cs" />
+    <Compile Include="Operations\BlueprintDto.cs" />
+    <Compile Include="Operations\BlueprintProductionTime.cs" />
+    <Compile Include="Operations\EPMMigrationSqlGenerator.cs" />
+    <Compile Include="Operations\OperationExtensions.cs" />
+    <Compile Include="Operations\StaticBlueprintOperation.cs" />
+    <Compile Include="Operations\StaticBlueprintProductionTimeOperation.cs" />
+    <Compile Include="Operations\StaticCategoryOperation.cs" />
+    <Compile Include="Operations\StaticGateOperation.cs" />
+    <Compile Include="Operations\StaticGroupOperation.cs" />
+    <Compile Include="Operations\StaticItemMetaOperation.cs" />
+    <Compile Include="Operations\StaticItemOperation.cs" />
+    <Compile Include="Operations\StaticManifestOperation.cs" />
+    <Compile Include="Operations\StaticPublishedItemOperation.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201507172230235_FreightCosts.resx">
+      <DependentUpon>201507172230235_FreightCosts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508010139563_TransactionTypeIndex.resx">
+      <DependentUpon>201508010139563_TransactionTypeIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508252300535_Galatea.resx">
+      <DependentUpon>201508252300535_Galatea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510012315030_Vanguard.resx">
+      <DependentUpon>201510012315030_Vanguard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510051923107_TrimItems.resx">
+      <DependentUpon>201510051923107_TrimItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609190634417_YC118.8.resx">
+      <DependentUpon>201609190634417_YC118.8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609260411046_StationPk.resx">
+      <DependentUpon>201609260411046_StationPk.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EmbeddedResource Include="Migrations\201505310225540_MosaicBlueprints.resx">
+      <DependentUpon>201505310225540_MosaicBlueprints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506070832018_Carnyx.resx">
+      <DependentUpon>201506070832018_Carnyx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506132304150_MissingIndexes.resx">
+      <DependentUpon>201506132304150_MissingIndexes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506202243039_SolarSystem.resx">
+      <DependentUpon>201506202243039_SolarSystem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506240822173_ManufacturingCostPrecision.resx">
+      <DependentUpon>201506240822173_ManufacturingCostPrecision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506262249157_MoreIndexes.resx">
+      <DependentUpon>201506262249157_MoreIndexes.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DbSoft.EVE.SDE\DBSoft.EVE.SDE.csproj">
+      <Project>{316eaa59-f595-4ddf-9a05-fd2c48b0cf86}</Project>
+      <Name>DBSoft.EVE.SDE</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <Import Project="..\packages\PostSharp.4.1.10\tools\PostSharp.targets" Condition="Exists('..\packages\PostSharp.4.1.10\tools\PostSharp.targets')" />
+  <Target Name="EnsurePostSharpImported" BeforeTargets="BeforeBuild" Condition="'$(PostSharp30Imported)' == ''">
+    <Error Condition="!Exists('..\packages\PostSharp.4.1.10\tools\PostSharp.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://www.postsharp.net/links/nuget-restore." />
+    <Error Condition="Exists('..\packages\PostSharp.4.1.10\tools\PostSharp.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://www.postsharp.net/links/nuget-restore." />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

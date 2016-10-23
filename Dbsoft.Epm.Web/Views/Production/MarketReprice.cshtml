@@ -1,0 +1,9 @@
+﻿@using Dbsoft.Epm.Web.Controllers.Production.UpdateSellOrders
+@model UpdateSellOrderModel
+
+@{
+	ViewBag.Title = "Update Sell Orders";
+}
+
+<h3 class="header">Update Sell Orders</h3><a href="@UpdateSellOrderModel.HelpUrl" target="_blank"><img src="~/images/info.jpg" alt="Help" class="info-icon"/></a>
+@Html.Raw(Model.TableHtml)

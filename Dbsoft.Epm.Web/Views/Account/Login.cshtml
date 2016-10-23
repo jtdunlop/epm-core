@@ -1,0 +1,21 @@
+﻿@using System.Threading.Tasks
+@using Dbsoft.Epm.Web.Infrastructure
+
+@{
+    ViewBag.Title = "Login";
+}
+@{
+    <h2>Login</h2>
+        <h5>
+            <span>Click on this link to authenticate with EVE Online and select your character.</span>
+        </h5>
+        <form asp-controller="Account" asp-action="ExternalLogin" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" class="form-horizontal" role="form">
+            <div>
+                <p>
+                    <button type="submit" class="eve-login" name="provider" value="EVE Online" title="Log in using your EVE Online account"></button>
+                </p>
+            </div>
+        </form>
+}
+
+

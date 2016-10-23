@@ -1,0 +1,129 @@
+﻿.info-icon {
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+}
+
+h3 ~ a .info-icon {
+	margin-top: -8px;
+}
+
+.error {
+	color: red;
+}
+
+.error a:link {
+	color: red;
+}
+
+.error a:visited {
+	color: red;
+}
+
+.date-picker {
+	margin-left: 20px;
+}
+
+.display-numeric {
+	text-align: right;
+}
+
+td > input[type="number"] {
+	width: 100px;
+	margin-top: -3px;
+}
+
+.input-wide {
+	width: 400px;
+}
+
+.edit-label {
+	vertical-align: top;
+	display: inline-block;
+	width: 150px;
+	height: 15px;
+	margin-right: 10px;
+	font-weight: bold;
+}
+
+.edit-input {
+	display: inline-block;
+}
+
+.account-mask {
+	margin-right: 15px;
+}
+
+.vcode-input {
+	width: 550px;
+}
+
+.account-li {
+	border: 1px solid;
+	padding: 10px;
+	margin: 5px;
+	display: table;
+	width: 750px;
+}
+
+.body {
+	background-color: #5c87b2;
+}
+
+.main {
+	background-color: white;
+}
+
+table {
+	background-color: white;
+}
+
+[ng-cloak] {
+  display: none !important;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+.eve-login {
+	background: url('../images/eve_sso_login_buttons_large_black.png');
+	border: none;
+	height: 45px;
+	width: 270px;
+}
+
+.item-saver {
+	width: 20px;
+	display: inline-flex;
+}
+
+.inline {
+	display: inline;
+}
+
+.item-saving {
+	color: black;
+}
+
+.item-saved {
+	color: green;
+}
+
+.fade {
+	opacity: 1;
+}
+
+.fade.ng-hide {
+    opacity: 0;
+	transition: opacity linear 1s;
+}
+
+.fade-ng-show {
+	opacity: 1;
+	transition: opacity linear 0;
+}
+
+.table-clickable td:hover {
+	cursor: pointer;
+}

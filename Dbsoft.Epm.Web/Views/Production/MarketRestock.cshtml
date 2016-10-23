@@ -1,0 +1,16 @@
+﻿@using System.Threading.Tasks
+@using Dbsoft.Epm.Web.Infrastructure.Html
+@model Dbsoft.Epm.Web.Controllers.Production.PostSellOrders.PostSellOrdersModel
+           
+@{
+    ViewBag.Title = "Post Sell Orders";
+}
+
+<h2>Post Sell Orders</h2>
+
+@{
+    var html = TableHtmlGenerator.Generate(Model.Table, Model.Detail);
+}
+
+@Html.Raw(html)
+

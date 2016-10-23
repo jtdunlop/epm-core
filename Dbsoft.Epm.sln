@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{932F23A4-5DD3-4F98-A532-6C2B20A6CB19}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Dbsoft.Epm.Web", "Dbsoft.Epm.Web\Dbsoft.Epm.Web.xproj", "{AAE8AFF9-21E4-48B4-8535-5BED849A665E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPM.DAL", "EPM.DAL\EPM.DAL.csproj", "{BB187601-A26A-430E-A280-5C38B549847C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EVE.API", "EVE.API\EVE.API.csproj", "{5DBA472D-80CB-401F-A180-E650A60492B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPM.DAL.CodeFirst", "EPM.DAL.CodeFirst\EPM.DAL.CodeFirst.csproj", "{AA569974-9357-4096-BFD9-4654FD6818A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBSoft.EVE.SDE", "DbSoft.EVE.SDE\DBSoft.EVE.SDE.csproj", "{316EAA59-F595-4DDF-9A05-FD2C48B0CF86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPM.Logic", "EPM.Logic\EPM.Logic.csproj", "{2FD96053-F3D9-441A-A870-EA0266846669}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPM.UI", "EPM.UI\EPM.UI.csproj", "{37D0763A-8675-4479-9962-1947067463F4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AAE8AFF9-21E4-48B4-8535-5BED849A665E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAE8AFF9-21E4-48B4-8535-5BED849A665E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAE8AFF9-21E4-48B4-8535-5BED849A665E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAE8AFF9-21E4-48B4-8535-5BED849A665E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB187601-A26A-430E-A280-5C38B549847C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB187601-A26A-430E-A280-5C38B549847C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB187601-A26A-430E-A280-5C38B549847C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB187601-A26A-430E-A280-5C38B549847C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DBA472D-80CB-401F-A180-E650A60492B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DBA472D-80CB-401F-A180-E650A60492B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DBA472D-80CB-401F-A180-E650A60492B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DBA472D-80CB-401F-A180-E650A60492B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA569974-9357-4096-BFD9-4654FD6818A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA569974-9357-4096-BFD9-4654FD6818A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA569974-9357-4096-BFD9-4654FD6818A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA569974-9357-4096-BFD9-4654FD6818A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{316EAA59-F595-4DDF-9A05-FD2C48B0CF86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{316EAA59-F595-4DDF-9A05-FD2C48B0CF86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{316EAA59-F595-4DDF-9A05-FD2C48B0CF86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{316EAA59-F595-4DDF-9A05-FD2C48B0CF86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FD96053-F3D9-441A-A870-EA0266846669}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FD96053-F3D9-441A-A870-EA0266846669}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FD96053-F3D9-441A-A870-EA0266846669}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FD96053-F3D9-441A-A870-EA0266846669}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37D0763A-8675-4479-9962-1947067463F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37D0763A-8675-4479-9962-1947067463F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37D0763A-8675-4479-9962-1947067463F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37D0763A-8675-4479-9962-1947067463F4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

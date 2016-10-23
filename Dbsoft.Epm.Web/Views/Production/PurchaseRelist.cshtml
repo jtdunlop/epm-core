@@ -1,0 +1,10 @@
+﻿@using Dbsoft.Epm.Web.Controllers.Production.PostBuyOrders
+@model PostBuyOrderModel
+
+@{
+    ViewBag.Title = "Post Buy Orders";
+}
+
+<h3 class="header">Post Buy Orders</h3><a href="@PostBuyOrderModel.HelpUrl" target="_blank"><img src="~/images/info.jpg" alt="Help" class="info-icon"/></a>
+
+@Html.Raw(Model.TableHtml)

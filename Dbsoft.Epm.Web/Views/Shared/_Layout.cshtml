@@ -1,0 +1,90 @@
+﻿@using System.Security.Policy
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width"/>
+    <script asp-src-include="~/lib/jquery/**/*.js"></script>
+    <script asp-src-include="~/lib/jquery-ui/**/*.js"></script>
+    <script asp-src-include="~/lib/signalr/**/*.js"></script>
+    <script asp-src-include="~/lib/angular/angular.js"></script>
+    <script asp-src-include="~/lib/**/*.js" asp-src-exclude="~/lib/jasmine/**/*.js"></script>
+    <script asp-src-include="~/app/app.js"></script>
+    <script asp-src-include="~/app/Directives/**/*.js"></script>
+    <link rel="stylesheet" asp-href-include="~/lib/**/*.css" />
+    <link rel="stylesheet" asp-href-include="~/css/**/*.css" />
+
+    <script>
+        window.baseUri = '/';
+        window.token = '@ViewBag.Token';
+    </script>
+
+
+    <script src="@Url.Content("~/signalr/hubs")" type="text/javascript"></script>
+
+
+    @RenderSection("ScriptBlock", false)
+</head>
+<body class="body">
+    @if (!ViewBag.HideMenu)
+    {
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#epm-navbar" type="button" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="epm-navbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Production<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="@Url.Action("RefreshAPI", "Production")">Refresh API</a></li>
+                            <li><a href="@Url.Action("ProductionMaterial", "Production")">Material</a></li>
+                            <li><a href="@Url.Action("ItemBuild", "Production")">Build Items</a></li>
+                            <li><a href="@Url.Action("InboundContract", "Production")">Inbound Contracts</a></li>
+                            <li><a href="@Url.Action("OutboundContract", "Production")">Outbound Contracts</a></li>
+                            <li><a href="@Url.Action("MarketRestock", "Production")">Post Sell Orders</a></li>
+                            <li><a href="@Url.Action("MarketReprice", "Production")">Update Sell Orders</a></li>
+                            <li><a href="@Url.Action("PurchaseRelist", "Production")">Post Buy Orders</a></li>
+                            <li><a href="@Url.Action("PurchaseReprice", "Production")">Update Buy Orders</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Reporting<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="@Url.Link("Default", new { Controller = "Reporting", Action = "ItemSales" })">Item Sales</a></li>
+                            <li><a href="@Url.Link("Default", new { Controller = "Reporting", Action = "DailySales" })">Daily Sales</a></li>
+                            <li><a href="@Url.Link("Default", new { Controller = "Reporting", Action = "MonthlySales" })">Monthly Sales</a></li>
+                            <li><a href="@Url.Link("Default", new { Controller = "Reporting", Action = "ItemCostTrend" })">Item Trends</a></li>
+                            <li><a href="@Url.Link("Default", new { Controller = "Reporting", Action = "MaterialCostTrend" })">Material Trends</a></li>
+                            <li><a href="@Url.Action("MarketResearch", "Reporting")">Market Research</a></li>
+                            @if (ViewBag.IsAdmin)
+                            {
+                                <li><a href="@Url.Link("Default", new { Controller = "Reporting", Action = "SubscriberSales" })">Subscriber Sales</a></li>
+                            }
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Maintenance<b class="caret"></b> </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="@Url.Action("Configuration", "Maintenance")">Configuration</a></li>
+                            <li><a href="@Url.Action("Accounts", "Maintenance")">Accounts</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="@Url.Action("Logout", "Account")">Logout</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    }
+
+    <div class="container main">
+        @RenderBody()
+    </div>
+</body>
+</html>

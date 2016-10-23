@@ -1,0 +1,25 @@
+﻿<table class="table table-striped table-bordered table-condensed">
+    <tbody>
+        <tr>
+            <th>Date</th>
+            <th class="display-numeric">Gross</th>
+            <th class="display-numeric">Profit</th>
+            <th class="display-numeric">Margin</th>
+        </tr>
+        <tr ng-repeat="result in model.detail">
+            <td>
+                <a href="javascript:void(0)" ng-click="itemSales(result)">{{result.dateTime | date:'M/d/yyyy'}}</a>
+            </td>
+            <td class="display-numeric">{{result.grossAmount | number:0}}</td>
+            <td class="display-numeric">{{result.gpAmt | number:0}}</td>
+            <td class="display-numeric">{{result.gpPct | number:2}}</td>
+        </tr>
+        <tr>
+            <th>Totals</th>
+            <th class="display-numeric">{{model.totals.gross | number:0}}</th>
+            <th class="display-numeric">{{model.totals.profit | number: 0}}</th>
+            <th class="display-numeric">{{model.totals.margin | number: 2}}</th>
+        </tr>
+
+    </tbody>
+</table>
