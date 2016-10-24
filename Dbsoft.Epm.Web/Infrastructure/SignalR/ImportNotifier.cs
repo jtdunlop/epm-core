@@ -1,10 +1,11 @@
 ﻿
+using Microsoft.AspNetCore.Mvc;
+
 namespace Dbsoft.Epm.Web.Infrastructure.SignalR
 {
     using System.Collections.Generic;
     using DBSoft.EPM.DAL.Services;
     using DBSoft.EPM.Logic;
-    using Microsoft.AspNet.Mvc;
     using Microsoft.AspNet.SignalR;
     using Microsoft.AspNet.SignalR.Infrastructure;
 
